@@ -12,9 +12,9 @@ var reseauNumber = 201;
 var infocheck = true;
 var adresseActuelle = window.location;
 if (adresseActuelle.hash == "#reseau") {
-            var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        document.getElementsByClassName("reseau")[0].className += " active";
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    document.getElementsByClassName("reseau")[0].className += " active";
     aboutNumber = 100.5;
     calendarNumber = -201;
     reseauNumber = 0;
@@ -23,9 +23,9 @@ if (adresseActuelle.hash == "#reseau") {
 }
 
 if (adresseActuelle.hash == "#about") {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        document.getElementsByClassName("about")[0].className += " active";
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    document.getElementsByClassName("about")[0].className += " active";
     aboutNumber = 0;
     calendarNumber = -301.5;
     reseauNumber = -100.5;
@@ -34,25 +34,25 @@ if (adresseActuelle.hash == "#about") {
 }
 
 if (adresseActuelle.hash == "#calendar") {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        document.getElementsByClassName("calendar")[0].className += " active";
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    document.getElementsByClassName("calendar")[0].className += " active";
     infocheck = true;
-            aboutNumber = 301.5;
-            calendarNumber = 0;
-            reseauNumber = 201;
-            biblioNumber = 100.5;
+    aboutNumber = 301.5;
+    calendarNumber = 0;
+    reseauNumber = 201;
+    biblioNumber = 100.5;
 }
 
 if (adresseActuelle.hash == "#bibliographie") {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        document.getElementsByClassName("bibliographie")[0].className += " active";
-              aboutNumber = 201;
-            calendarNumber = -100.5;
-            reseauNumber = 100.5;
-            biblioNumber = 0;
-            infocheck = true;
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    document.getElementsByClassName("bibliographie")[0].className += " active";
+    aboutNumber = 201;
+    calendarNumber = -100.5;
+    reseauNumber = 100.5;
+    biblioNumber = 0;
+    infocheck = true;
 }
 
 fin();
@@ -96,10 +96,8 @@ for (var i = 0; i < navbar.length; i++) {
             setTimeout(function() {
                 if (biblio[1].style.transform == "translate(" + biblioNumber + "%, 0%)") {
                     fin();
-
                 }
             }, 2000);
-
         };
 
         if (this.classList.contains("bibliographie")) {
@@ -115,8 +113,6 @@ for (var i = 0; i < navbar.length; i++) {
 
                 }
             }, 2000);
-
-
         };
 
         if (this.classList.contains("calendrier")) {
@@ -132,11 +128,7 @@ for (var i = 0; i < navbar.length; i++) {
 
                 }
             }, 2000);
-
         };
-
-
-
     });
 }
 

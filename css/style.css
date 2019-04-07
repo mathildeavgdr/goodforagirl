@@ -205,7 +205,8 @@ grid-area: text_c;
 
 .navbar a {
     font-family: Clearface;
-    font-size: 5.25vh;
+   font-size: 5.25vh;
+
     border: 1px groove black;
     border-radius: 10px;
     margin: auto 0.7vh;
@@ -331,7 +332,7 @@ grid-area: text_c;
 .vertical-menu {
     width: 100%;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     /* Set a width if you like */
 
 }
@@ -341,7 +342,7 @@ grid-area: text_c;
     display: block;
     text-decoration: none;
     font-family: Ogg;
-    font-size: 3.25vh;
+    font-size: 1.75vw;
     border: 1px groove black;
     border-radius: 10px;
     color: black;
@@ -374,7 +375,7 @@ height: 8.25vh;
 .wrapper {
     width: 100%;
     height: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 
@@ -394,6 +395,7 @@ height: 8.25vh;
     height: auto;
     margin-right: 0.8vh;
     border: none;
+    position: relative;
     margin-top: 0vh;
     overflow: hidden;
 }
@@ -412,7 +414,7 @@ height: 8.25vh;
 
 }
 
-#container .box {
+.container .box {
   width:36.45vw;
   font-family: Clearface;
   border:  1px groove black;
@@ -423,12 +425,12 @@ height: 8.25vh;
   position:relative;
 }
 
-#container .box :last-child {
+.container .box :last-child {
   margin-right: 0.0vh;
 
 
 }
-#container .box > div {
+.container .box > div {
 margin-top: 0vh;
   font-size: 2vh;
   position:absolute;
@@ -437,7 +439,7 @@ margin-top: 0vh;
   padding: 2vh;
   line-height:2.7vh;
 }
-#container {
+.container {
   overflow-y:scroll;
   overflow-x:hidden;
   transform: rotate(270deg) translateX(-100%);
@@ -447,7 +449,7 @@ margin-top: 0vh;
   height:74.4vw;
   z-index: 0;
 }
-#container2 {
+.container2 {
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   white-space:nowrap;
@@ -468,12 +470,15 @@ margin-top: 0vh;
     text-decoration: none;
     width: 99.4%;
     cursor: default;
+    overflow: hidden;
 
 }
 
 .vertical-menu-bib a:hover{
 
 }
+
+
 
 .navbarinside {
     font-family: Clearface;
@@ -494,6 +499,20 @@ margin-top: 0vh;
 
 .vertical-menu-bib a:last-child {
         height:72.99vh;
+}
+
+#imgo {
+    width: 168%;
+    height: 100%;
+    cursor: pointer; 
+    transform: translate(-19.5%,0);
+}
+
+
+::-webkit-scrollbar { 
+    display: none; 
+        scrollbar-width: none; /* Firefox 64 */
+
 }
 
 

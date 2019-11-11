@@ -3,6 +3,7 @@ var navbar = document.getElementsByClassName("btn");
 var about = document.getElementsByClassName("about");;
 var biblio = document.getElementsByClassName("bibliographie");;
 var reseau = document.getElementsByClassName("reseau");;
+var windowwith = window.innerWidth;
 
 var aboutNumber = 0;
 var biblioNumber = 104.5;
@@ -21,16 +22,16 @@ if (adresseActuelle.hash == "#reseau") {
 
 let item20 = document.getElementsByClassName("item20");
 
-            if (window.innerWidth <= 600) {
-                for (let j = 0; j < item20[0].parentNode.children.length; j++) {
-                    //item20[0].children[j].style.display = "none";
-                    //console.log(item20[0].parentNode.children[j]);
-                    item20[0].parentNode.children[j].style.display = "none";
-                }
+if (window.innerWidth <= 600) {
+    for (let j = 0; j < item20[0].parentNode.children.length; j++) {
+        //item20[0].children[j].style.display = "none";
+        //console.log(item20[0].parentNode.children[j]);
+        item20[0].parentNode.children[j].style.display = "none";
+    }
 
-                item20[0].style.display = "flex";
+    item20[0].style.display = "flex";
 
-            }
+}
 
 if (adresseActuelle.hash == "#about") {
     var current = document.getElementsByClassName("active");
@@ -157,6 +158,12 @@ for (var i = 0; i < navbar.length; i++) {
 
 }
 
+function resizing() {
+    if (windowwith <= 600 && window.innerWidth > 600) window.location.reload();
+    if (windowwith > 600 && window.innerWidth <= 600) window.location.reload();
+        windowwith = window.innerWidth;
+}
+
 function deplacer(filo) {
     about[1].style.transform = "translate(" + aboutNumber + "%, " + filo + "%)"
     reseau[1].style.transform = "translate(" + reseauNumber + "%, " + filo + "%)"
@@ -195,3 +202,5 @@ function fin() {
         }
     }
 }
+
+window.onresize = resizing;

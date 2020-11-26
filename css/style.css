@@ -221,22 +221,23 @@ body {
 
 
 .navbar a {
-    font-family: Clearface;
-    font-size: 3vw;
-
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: auto 0.7vh;
-    display: block;
-    color: black;
-    height: 55%;
-    line-height: 4.75vh;
-    width: auto;
-    position: relative;
-    transform: translate(0%, 0);
-    text-align: center;
-    padding: 0.5vw 1vh 0.25vw 1vh;
-    text-decoration: none;
+ font-family: Clearface;
+font-size: 3vw;
+border: 1px solid black;
+border-radius: 10px;
+margin: auto 0.7vh;
+display: block;
+color: black;
+height: 50%;
+width: auto;
+position: relative;
+transform: translate(0%, 0);
+text-align: center;
+padding: 0.5vw 1vh 0.5vw 1vh;
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .boximage {
